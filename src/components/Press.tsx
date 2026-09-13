@@ -1,10 +1,13 @@
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+
 export default function Press() {
   return (
     <section className="bg-cream text-char">
       <div className="mx-auto max-w-5xl container-px py-16 lg:py-20">
         <div className="grid gap-8 lg:grid-cols-[1fr_1.1fr] lg:gap-14 items-center">
           <div>
-            <p className="text-xs font-semibold tracking-[0.15em] text-olive">FEATURED PRESS</p>
+            <p className="text-xs font-semibold tracking-[0.15em] text-olive uppercase">Featured Press</p>
             <h2 className="font-serif text-2xl sm:text-3xl font-bold mt-3 leading-snug">
               Does a Wichita spot serve the best cheeseburger in Kansas? Yelp reviewers think so.
             </h2>
@@ -13,6 +16,15 @@ export default function Press() {
               has become the name Wichita reaches for when the cheeseburger conversation comes up.
             </p>
             <p className="mt-4 text-sm font-medium text-char/60">By Lindsay Smith · The Wichita Eagle</p>
+            <div className="mt-6">
+              <Link
+                href="/about"
+                className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-olive hover:text-cheddar transition-colors"
+              >
+                <span>Read Our Story</span>
+                <ArrowRight size={14} />
+              </Link>
+            </div>
           </div>
           <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-[4/3]">
             <img

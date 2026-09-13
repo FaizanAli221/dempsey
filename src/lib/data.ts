@@ -3,12 +3,11 @@ export const site = {
   address: "3700 East Douglas Ave, Wichita, KS 67208",
   phone: "(316) 425-3831",
   navLinks: [
-    { label: "Menu", href: "#menu" },
-    { label: "Specials", href: "#specials" },
-    { label: "Gallery", href: "#gallery" },
-    { label: "Reviews", href: "#reviews" },
-    { label: "Newsletter", href: "#newsletter" },
-    { label: "Hours & Location", href: "#footer" },
+    { label: "Home", href: "/" },
+    { label: "Menu", href: "/menu" },
+    { label: "Our Story", href: "/about" },
+    { label: "Reservations", href: "/reservations" },
+    { label: "Contact & Hours", href: "/contact" },
   ],
 };
 

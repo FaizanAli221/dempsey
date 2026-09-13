@@ -50,6 +50,8 @@ export const reservationSchema = z
     time: z
       .string({ message: "Time is required." })
       .regex(/^([01]\d|2[0-3]):([0-5]\d)$/, "Time must be in HH:MM (24-hour) format."),
+    seatingPreference: z.string().trim().max(50).optional(),
+    specialRequests: z.string().trim().max(500).optional(),
   })
   .refine(
     (data) => {

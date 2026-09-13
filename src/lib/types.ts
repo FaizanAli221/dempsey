@@ -55,6 +55,8 @@ export interface ReservationInput {
   date: string;
   /** 24-hour time string, e.g. "19:30". */
   time: string;
+  seatingPreference?: string;
+  specialRequests?: string;
 }
 
 export interface Reservation extends ReservationInput {

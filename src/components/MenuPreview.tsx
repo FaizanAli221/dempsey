@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Loader2, AlertCircle, Utensils } from "lucide-react";
+import Link from "next/link";
+import { Loader2, AlertCircle, Utensils, ArrowRight } from "lucide-react";
 import type { ApiResponse, MenuCategory, MenuItem } from "@/lib/types";
 
 const CATEGORIES = ["All", "Burgers", "Drinks", "Sides", "Daily Specials"] as const;
@@ -199,6 +200,18 @@ export default function MenuPreview() {
                 )}
               </div>
             ))}
+          </div>
+        )}
+
+        {status === "ready" && (
+          <div className="mt-14 text-center">
+            <Link
+              href="/menu"
+              className="inline-flex items-center gap-2.5 rounded-full bg-cream px-8 py-3.5 text-xs font-bold uppercase tracking-wider text-char hover:bg-cheddar transition-all shadow-xl hover:scale-105"
+            >
+              <span>Explore Full Menu &amp; Drink List</span>
+              <ArrowRight size={15} />
+            </Link>
           </div>
         )}
       </div>
