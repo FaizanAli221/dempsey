@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const inter = Inter({
@@ -27,7 +28,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        {children}
+        <Script
+          src="https://cdn.zanderio.ai/widget/loader.js"
+          data-id="wdg_VwuOlrfPdvEb71xyrVXyzIso"
+          strategy="afterInteractive"
+        />
+      </body>
     </html>
   );
 }
